@@ -9,7 +9,7 @@
 - [A valid Azure account][azure-account]
 
 ## Usage
-Each script in this folder is designed to perform a specific task with APPI. Before running a querty, make sure to replace any placeholders with your own information.
+Each script in this folder is designed to perform a specific task with APPI. Before running a query, make sure to replace any placeholders with your own information.
 
 ## Script Descriptions
 
