@@ -13,11 +13,11 @@ Each script in this folder is designed to perform a specific task with APPI. Bef
 
 ## Script Descriptions
 
-- **[xxx]**: xxxx.
+- **[data-usage-query.kql]**: xxxx.
 
 ## Disclaimer
 Please note that this is provided as-is and may not suit all use cases. Use at your own discretion and make sure to thoroughly test before deployment in a production environment.
 
 [azure-account]: https://azure.microsoft.com/en-us/free
-[xxxx]: xxxx
+[data-usage-query.kql]: data-usage-query.kql
 
