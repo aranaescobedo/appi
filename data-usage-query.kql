@@ -19,3 +19,10 @@ union AppAvailabilityResults,
 | summarize TypeDataGB = round(sum(_BilledSize / 1024 / 1024 / 1024), 2) by Type
 |order by TypeDataGB
 //|render barchart
+
+//Source:
+//https://learn.microsoft.com/en-us/azure/azure-monitor/logs/analyze-usage
+
+//What does the different DataType mean:
+//https://learn.microsoft.com/en-us/azure/azure-monitor/reference/
+
