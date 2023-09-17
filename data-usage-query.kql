@@ -1,0 +1,28 @@
+let aiName = '<APPLICATION_INSIGHTS_NAME>';
+let startDate = ago(<TIME>);
+union AppAvailabilityResults,
+    AppBrowserTimings,
+    AppDependencies,
+    AppExceptions,
+    AppEvents,
+    AppMetrics,
+    AppPageViews,
+    AppPerformanceCounters,
+    AppRequests,
+    AppSystemEvents,
+    AppTraces,
+    AzureMetrics,
+    ACRConnectedClientList
+| where TimeGenerated >= startofday(startDate) and TimeGenerated < startofday(now())
+| extend resource = tostring(split(_ResourceId, "/")[8])
+| where resource == aiName 
+| summarize TypeDataGB = round(sum(_BilledSize / 1024 / 1024 / 1024), 2) by Type
+|order by TypeDataGB
+//|render barchart
+
+//Source:
+//https://learn.microsoft.com/en-us/azure/azure-monitor/logs/analyze-usage
+
+//What does the different DataType mean:
+//https://learn.microsoft.com/en-us/azure/azure-monitor/reference/
+
