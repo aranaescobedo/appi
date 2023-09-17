@@ -9,11 +9,11 @@
 - [A valid Azure account][azure-account]
 
 ## Usage
-Each script in this folder is designed to perform a specific task with APPI. Before running a script, make sure to replace any placeholders with your own information.
+Each script in this folder is designed to perform a specific task with APPI. Before running a querty, make sure to replace any placeholders with your own information.
 
 ## Script Descriptions
 
-- **[data-usage-query.kql]**: xxxx.
+- **[data-usage-query.kql]**: This Kusto Query is intended to be run inside your Log Analytics workspace and is designed to analyze data usage for a specific Azure Application Insights resource over a specified time, summarizing data types and sizes.
 
 ## Disclaimer
 Please note that this is provided as-is and may not suit all use cases. Use at your own discretion and make sure to thoroughly test before deployment in a production environment.
