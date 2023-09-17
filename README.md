@@ -1,7 +1,7 @@
 <p align="center">
  <img width="100px" src=".images/azure-application-insights.svg" align="center" alt="Azure Application Insights" />
  <h2 align="center">Application Insights (APPI)</h2>
- <p align="center">This repository contains scripts that are used to interact with Azure Application Insights (APPI).</p>
+ <p align="center">This repository provides resources for managing and troubleshooting Azure Application Insights!</p>
 </p>
 
 ## Prerequisites
