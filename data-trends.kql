@@ -1,5 +1,5 @@
 let appiName = '<APPLICATION_INSIGHT_NAME>';
-let startday = ago(<TIME_PERIOD>);
+let startday = ago(<DAYS_BACK>);
 union AppAvailabilityResults,
       AppBrowserTimings,
       AppDependencies,
