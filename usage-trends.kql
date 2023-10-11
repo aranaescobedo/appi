@@ -1,0 +1,19 @@
+let appiName = '<APPLICATION_INSIGHT_NAME>';
+let startday = ago(<TIME_PERIOD>);
+union AppAvailabilityResults,
+      AppBrowserTimings,
+      AppDependencies,
+      AppExceptions,
+      AppEvents,
+      AppMetrics,
+      AppPageViews,
+      AppPerformanceCounters,
+      AppRequests,
+      AppSystemEvents,
+      AppTraces
+| where TimeGenerated >= startofday(startday) and TimeGenerated < startofday(now())
+| extend resource = tostring(split(_ResourceId, "/")[8])
+| where resource == appiName
+| summarize round(sum(_BilledSize / 1024 / 1024 / 1024), 2) by _ResourceId, bin(TimeGenerated, 1d)
+|project-rename Logging_amount_GB = sum_, Date = TimeGenerated
+ | render timechart
